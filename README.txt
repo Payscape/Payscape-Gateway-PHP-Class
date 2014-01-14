@@ -7,6 +7,9 @@
 	 * 
 	 *  /crt/cacert.pem is included so that you may use cURL.
 	 *  Place this folder in your root directory 
+	 *
+	 * If you prefer, you may also download this file at the cURL website:
+	 *  http://curl.haxx.se/ca/cacert.pem 	 
 	 *  	  
 	 * 
 	 * Sale() detects if your transaction is Credit Card or eCheck and sends the correct params 
