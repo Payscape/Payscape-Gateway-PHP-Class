@@ -15,6 +15,7 @@ SQLite*
 ##Installation
 
 ##Setup
+* Open /Payscape/payscape-config.php
 * Edit userid: replace with your User ID from your Payscape account
 * Edit userpass: replace with your Password from your Payscape account
 	  

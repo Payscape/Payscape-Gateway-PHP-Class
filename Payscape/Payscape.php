@@ -1,6 +1,6 @@
 <?php 
 	/*
-	 * Payscape Direct Post API PHP Class v3.0
+	 * Payscape Gateway API PHP Class v3.0
 	 * 
 	 * Edit userid: replace with your User ID from your Payscape account
 	 * Edit userpass: replace with your Password from your Payscape account
@@ -52,9 +52,10 @@ class Payscape
 	
 	protected function _send($trans){
 		
+		require_once('payscape-config.php');
 
-		$trans['username'] = $this->userid;
-		$trans['password'] = $this->userpass;
+		$trans['username'] = $userid;
+		$trans['password'] = $userpass;
 
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL, $this->url);
@@ -160,8 +161,6 @@ public function Validate($incoming=null){
 
 	if(count(array_intersect_key(array_flip($required), $incoming)) === count($required)) {
 		$transactiondata = array();
-		$transactiondata['username'] = $this->userid;
-		$transactiondata['password'] = $this->userpass;
 		$transactiondata['type'] = $type;
 
 
@@ -338,8 +337,6 @@ public function Validate($incoming=null){
 	
 		if(count(array_intersect_key(array_flip($required), $incoming)) === count($required)) {
 			$transactiondata = array();
-			$transactiondata['username'] = $this->userid;
-			$transactiondata['password'] = $this->userpass;
 			$transactiondata['type'] = 'void';
 			$transactiondata['transactionid'] = (isset($incoming['transactionid']) ? $incoming['transactionid'] : '');
 				
@@ -362,8 +359,6 @@ public function Validate($incoming=null){
 		
 		if(count(array_intersect_key(array_flip($required), $incoming)) === count($required)) {
 			$transactiondata = array();
-			$transactiondata['username'] = $this->userid;
-			$transactiondata['password'] = $this->userpass;
 			
 			$transactiondata['type'] = 'refund';
 			$transactiondata['transactionid'] = (isset($incoming['transactionid']) ? $incoming['transactionid'] : '');				
@@ -391,9 +386,7 @@ public function Validate($incoming=null){
 		if(count(array_intersect_key(array_flip($required), $incoming)) === count($required)) {
 			$transactiondata = array();
 			
-			$transactiondata['type'] = 'update';
-			$transactiondata['username'] = $this->userid;
-			$transactiondata['password'] = $this->userpass;			
+			$transactiondata['type'] = 'update';		
 			$transactiondata['transactionid'] = (isset($incoming['transactionid']) ? $incoming['transactionid'] : '');
 			
 			/* optional fields */
