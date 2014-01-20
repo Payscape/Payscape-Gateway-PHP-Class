@@ -13,6 +13,19 @@ Microsoft SQL Server or
 SQLite* 
 
 ##Installation
+### Clone With GIT
+* Open your command line interface
+* Navigate to your */classes* folder.
+* The following command will create the Payscape folder and clone the Payscape Gateway PHP Class 
+```
+git clone https://github.com/Payscape/Payscape-Gateway-PHP-Class.git  Payscape  
+```
+
+### Download the ZIP File
+* Download the ZIP file to your machine from here: https://github.com/Payscape/Payscape-Gateway-PHP-Class/archive/master.zip
+* Create the folder /Payscape in your */classes* directory.
+* Copy the unzipped archive to your */classes/Payscape* directory.
+
 
 ##Setup
 * Open /Payscape/payscape-config.php
@@ -23,7 +36,7 @@ SQLite*
 ##cURL info	  
 * /crt/cacert.pem is included so that you may use cURL.
 * Place this folder in your root directory 
-* If you prefer, you may also download this file at the cURL website http://curl.haxx.se/ca/cacert.pem 	 
+* If you prefer, you may also download cacert.pem at the cURL website http://curl.haxx.se/ca/cacert.pem 	 
 	   	  
 ##Version 3.0 notes	  
 * Sale() detects if your transaction is Credit Card or eCheck and sends the correct params 
