@@ -1,7 +1,7 @@
 
 #Payscape Gateway PHP Class v3.0
 Rapid eCommerce web development with PHP and the Payscape Gateway PHP Class
-
+Add the Payscape Gateway to your web application with this Payscape Gateway PHP Class.
 
 ## Requirements
 * PHP 4, 5
@@ -28,14 +28,15 @@ git clone https://github.com/Payscape/Payscape-Gateway-PHP-Class.git  Payscape
 
 
 ##Setup
-* Open /Payscape/payscape-config.php
+* Open /classes/Payscape/payscape-config.php
 * Edit userid: replace with your User ID from your Payscape account
 * Edit userpass: replace with your Password from your Payscape account
 	  
 
-##cURL info	  
+##cURL info	
+### Install cacert.pem for cURL
 * /crt/cacert.pem is included so that you may use cURL.
-* Place this folder in your root directory 
+* Copy /classes/Payscape/crt/cacert.pem to your document root.
 * If you prefer, you may also download cacert.pem at the cURL website http://curl.haxx.se/ca/cacert.pem 	 
 	   	  
 ##Version 3.0 notes	  
