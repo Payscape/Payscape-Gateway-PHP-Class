@@ -138,6 +138,10 @@ class Payscape
 		$transactiondata['orderid'] = (isset($incoming['orderid']) ? $incoming['orderid'] : '');
 	
 		return $this->_send($transactiondata);
+
+		$response = $this->_send($transactiondata);
+		parse_str($response, $result_array);
+		return $result_array;
 	
 	} else {
 		$response['Message'] = 'Required Values Are Missing';
@@ -184,7 +188,9 @@ public function Validate($incoming=null){
 		$transactiondata['email'] = (isset($incoming['email']) ? $incoming['email'] : '');
 		$transactiondata['orderid'] = (isset($incoming['orderid']) ? $incoming['orderid'] : '');
 
-		return $this->_send($transactiondata);
+		$response = $this->_send($transactiondata);
+		parse_str($response, $result_array);
+		return $result_array;
 
 	} else {
 		$response['Message'] = 'Required Values Are Missing';
