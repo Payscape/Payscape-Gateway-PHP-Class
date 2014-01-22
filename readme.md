@@ -258,9 +258,9 @@ require_once 'classes/Payscape/Payscape.php';
 
 $incoming = array();
 $incoming['type'] = 'credit;
-$incoming['transactionid'] = 'sale transaction id';
+$incoming['transactionid'] = 'sale transactionid';
 $incoming['amount'] = 'sale amount';
-$incoming['orderid'] = 'sale transactionid';
+$incoming['orderid'] = 'sale orderid';
 		
 $incoming['time'] = $time;	
 	
@@ -351,7 +351,7 @@ require_once 'classes/Payscape/Payscape.php';
 
 $incoming = array();
 $incoming['type'] = 'refund';
-$incoming['transactionid'] = 'sale transaction id';
+$incoming['transactionid'] = 'sale transactionid'; 
 $incoming['amount'] = 'required only if refund is less than the origianl sale transaction amount';
 
 $Payscape = NEW Payscape();
@@ -382,7 +382,7 @@ require_once 'classes/Payscape/Payscape.php';
 
 incoming = array();
 $incoming['type'] = 'refund;
-$incoming['transactionid'] = 'sale transaction id';
+$incoming['transactionid'] = 'sale transactionid';
 $incoming['shipping_carrier'] = 'shipping_carrier';
 $incoming['tracking_number'] = 'shipping carrier tracking_number';
 		
