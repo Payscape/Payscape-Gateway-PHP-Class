@@ -410,15 +410,12 @@ Array
 ```
 ### Example Void transaction
 ```
-require_once 'classes/Payscape/Payscape.php';
-
 $incoming = array();
 $incoming['type'] = $'void';
-$incoming['transactionid'] = 'sale transaction id';
+$incoming['transactionid'] = '2136214021'; // sale transactionid
 $incoming['amount'] = 'sale amount';
 
-$Payscape = NEW Payscape();
-$result_array = $Payscape->Void($incoming);
+$result_array = $this->Payscape->Void($incoming);
 ```
 ### Example Response Void Success
 ```
@@ -427,7 +424,7 @@ Array
     [response] => 1
     [responsetext] => Transaction Void Successful
     [authcode] => 123456
-    [transactionid] => 2110075690
+    [transactionid] => 2136214021
     [avsresponse] => 
     [cvvresponse] => 
     [orderid] => 20131230143602Test
@@ -437,6 +434,6 @@ Array
     [merchant_defined_field_7] => 
     [customer_vault_id] => 
 )
-``` 	  
+```	  
 	  
-1/14/2014
+1/21/2014
