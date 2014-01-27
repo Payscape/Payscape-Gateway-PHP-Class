@@ -2,6 +2,10 @@
 #Payscape Gateway PHP Class v3.0
 Rapid eCommerce web development with PHP and the Payscape Gateway PHP Class
 Add the Payscape Gateway to your web application with this Payscape Gateway PHP Class.
+## Author
+* github@payscape.com
+## Contact
+* github@payscape.com
 
 ## Requirements
 * PHP 4, 5
